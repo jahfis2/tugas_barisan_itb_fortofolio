@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Tim Kami</title>
+    <style>
+        /* --- CSS Styling Dasar & Responsif --- */
+        body {
+            font-family: 'Poppins', sans-serif; /* Menggunakan font modern */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            
+            /* Mengatur Gambar Latar Belakang Utama */
+            background-image: url('webcam-toy-photo37.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Overlay untuk Meningkatkan Keterbacaan Teks di atas Background */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.95); /* Putih semi-transparan */
+            min-height: 100vh;
+            padding: 40px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .header {
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .header h1 {
+            font-size: clamp(1.8em, 4vw, 3em);
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            color: #6c757d;
+        }
+
+        /* Styling Grid Anggota Tim */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Jarak antar kartu */
+            padding: 20px 0;
+        }
+
+        .member-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%; /* Default 100% untuk mobile */
+            max-width: 280px; /* Maksimum lebar kartu */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-img {
+            width: 100%;
+            height: 200px; /* Tinggi tetap untuk gambar profil */
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 15px;
+        }
+
+        .member-info h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #28a745;
+            font-size: 1.5em;
+        }
+        
+        .member-info p {
+            font-size: 0.9em;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-details h4 {
+            margin: 0 0 8px 0;
+            font-size: 1em;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .contact-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+        
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+
+        .contact-details li strong {
+            display: inline-block;
+            min-width: 65px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Media Query untuk Responsivitas */
+        @media (min-width: 600px) {
+            .team-grid {
+                gap: 30px;
+            }
+            .member-card {
+                width: calc(50% - 30px); /* 2 kolom untuk tablet */
+            }
+        }
+
+        @media (min-width: 992px) {
+            .member-card {
+                width: calc(33.333% - 20px); /* 3 kolom untuk desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <header class="header">
+                <h1>Tim Pengembang Kreatif</h1>
+                <p>Mengenal anggota-anggota yang berkontribusi pada proyek ini.</p>
+            </header>
+
+            <main class="team-grid">
+                
+                <!-- Kartu Anggota: ZAHRAN -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo30.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/007bff/ffffff?text=Zahran';" alt="Foto Zahran" class="member-img">
+                    <div class="member-info">
+                        <h3>Zahran</h3>
+                        <p>Lead Developer | Spesialis Frontend</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Jl. Anggrek No. 15, Bandung</li>
+                                <li><strong>Telp:</strong> +62 812-3456-7890</li>
+                                <li><strong>Email:</strong> zahran.dev@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Anggota: HAMZAH -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo31.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/28a745/ffffff?text=Hamzah';" alt="Foto Hamzah" class="member-img">
+                    <div class="member-info">
+                        <h3>Hamzah</h3>
+                        <p>Project Manager | Analis Bisnis</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Komplek Griya Asri Blok C-7, Jakarta Selatan</li>
+                                <li><strong>Telp:</strong> +62 878-1122-3344</li>
+                                <li><strong>Email:</strong> hamzah.pm@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Anggota: RAFI -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo32.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffc107/000000?text=Rafi';" alt="Foto Rafi" class="member-img">
+                    <div class="member-info">
+                        <h3>Rafi</h3>
+                        <p>UI/UX Designer | Ilustrator</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Perumahan Elite Blok A1, Surabaya</li>
+                                <li><strong>Telp:</strong> +62 856-9988-7766</li>
+                                <li><strong>Email:</strong> rafi.design@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Anggota: DENIS -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo33.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/dc3545/ffffff?text=Denis';" alt="Foto Denis" class="member-img">
+                    <div class="member-info">
+                        <h3>Denis</h3>
+                        <p>Mobile App Developer | QA</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Jl. Merdeka Raya No. 45, Medan</li>
+                                <li><strong>Telp:</strong> +62 821-5544-3322</li>
+                                <li><strong>Email:</strong> denis.mobile@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kartu Anggota: FAISAL -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo34.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/6f42c1/ffffff?text=Faisal';" alt="Foto Faisal" class="member-img">
+                    <div class="member-info">
+                        <h3>Faisal</h3>
+                        <p>Backend Engineer | Database Administrator</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Gg. Kenanga 12B, Yogyakarta</li>
+                                <li><strong>Telp:</strong> +62 819-0011-2233</li>
+                                <li><strong>Email:</strong> faisal.be@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Anggota: RANGGA PUJI -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo35.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/17a2b8/ffffff?text=Rangga+Puji';" alt="Foto Rangga Puji" class="member-img">
+                    <div class="member-info">
+                        <h3>Rangga Puji</h3>
+                        <p>DevOps Specialist | Cloud Engineer</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Jl. Pahlawan No. 200, Semarang</li>
+                                <li><strong>Telp:</strong> +62 813-7788-9900</li>
+                                <li><strong>Email:</strong> rangga.devops@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Anggota: CHIKO -->
+                <div class="member-card">
+                    <img src="webcam-toy-photo36.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/fd7e14/ffffff?text=Chiko';" alt="Foto Chiko" class="member-img">
+                    <div class="member-info">
+                        <h3>Chiko</h3>
+                        <p>Technical Writer | Content Strategist</p>
+                        <div class="contact-details">
+                            <h4>Detail Kontak</h4>
+                            <ul>
+                                <li><strong>Alamat:</strong> Kawasan Industri Kav. 5, Makassar</li>
+                                <li><strong>Telp:</strong> +62 896-4455-6677</li>
+                                <li><strong>Email:</strong> chiko.writer@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>
